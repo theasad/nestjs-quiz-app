@@ -7,7 +7,11 @@ import { typeOrmConfigAsync } from './config/typeorm.config';
 import { QuizModule } from './modules/quiz/quiz.module';
 
 @Module({
-  imports: [QuizModule, TypeOrmModule.forRootAsync(typeOrmConfigAsync)],
+  imports: [
+    ConfigModule.forRoot({ isGlobal: true, cache: true }),
+    QuizModule,
+    TypeOrmModule.forRootAsync(typeOrmConfigAsync),
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
