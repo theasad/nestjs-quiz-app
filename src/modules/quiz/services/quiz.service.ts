@@ -23,7 +23,9 @@ export class QuizService {
     return await this.quizRepository.findOneOrFail({
       where: { id: id },
       relations: {
-        questions: true,
+        questions: {
+          options: {},
+        },
       },
     });
   }
