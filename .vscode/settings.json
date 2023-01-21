@@ -1,0 +1,17 @@
+{
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3360,
+      "driver": "MySQL",
+      "name": "Common-MYSQL",
+      "database": "quiz",
+      "username": "root",
+      "password": "secret"
+    }
+  ]
+}
